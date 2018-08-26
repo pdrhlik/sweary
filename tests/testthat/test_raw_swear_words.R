@@ -26,13 +26,17 @@ test_that("swear word lists folder exists", {
 
 purrr::walk(swear_word_files, function(swear_word_file) {
 	lang <- file_name(swear_word_file)
-	f <- readLines(swear_word_file)
+	f <- readLines(swear_word_file, encoding = "UTF-8")
 
 	test_that(paste(lang, "file is sorted"), {
-		expect_false(is.unsorted(f))
+		expect_equal(f, sort(f))
 	})
 
 	test_that(paste(lang, "file is lowercase"), {
 		expect_equal(f, tolower(f))
+	})
+
+	test_that(paste(lang, "file contains unique words"), {
+		expect_equal(f, unique(f))
 	})
 })
