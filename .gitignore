@@ -1,3 +1,4 @@
 .Rbuildignore
 .Rproj.user
 *.Rproj
+.Rhistory
