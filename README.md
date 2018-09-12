@@ -20,7 +20,7 @@ devtools::install_github("pdrhlik/sweary")
 
 ## How to use it
 
-The project is in the phase of creating raw swear word lists right now. There will be convenient functions to extract only the words that are of your interest.
+The package contains a data frame called `swear_words`. You can filter or modify it as you wish now. There will be convenient functions to extract only the languages that are of your interest.
 
 ## Contributions
 
