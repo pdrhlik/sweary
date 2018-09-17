@@ -8,6 +8,14 @@
 \description{
 sweary: A database of swear words from multiple languages
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/pdrhlik/sweary}
+  \item Report bugs at \url{https://github.com/pdrhlik/sweary/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Patrik Drhlik \email{patrik.drhlik@gmail.com}
 

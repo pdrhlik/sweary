@@ -7,6 +7,9 @@ Authors@R: person("Patrik", "Drhlik", email = "patrik.drhlik@gmail.com",
 Description: The packages tries to offer an extensive list of swear
     words from different languages, cherry picked by native speakers.
     It should then be used in different text analyses.
+URL: https://github.com/pdrhlik/sweary
+BugReports: https://github.com/pdrhlik/sweary/issues
+Depends: R (>= 2.10)
 License: MIT
 Encoding: UTF-8
 LazyData: true
