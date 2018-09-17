@@ -1,6 +1,3 @@
-library(dplyr)
-library(purrr)
-
 context("Swear word data frame")
 
 test_that("swear word data frame exists", {
