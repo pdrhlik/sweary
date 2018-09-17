@@ -1,6 +1,6 @@
 library(testthat)
 library(sweary)
 library(dplyr)
-library(purr)
+library(purrr)
 
 test_check("sweary")
