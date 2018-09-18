@@ -1,3 +1,6 @@
+[![Join the chat at https://gitter.im/pdrhlik/sweary](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pdrhlik/sweary)
+
+
 # sweary <img src="sticker/sweary-sticker.png" align="right" width="150" />
 
 Sweary is an R package that contains a database of swear words from different languages, cherry picked by native speakers.
