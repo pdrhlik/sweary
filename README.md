@@ -30,6 +30,26 @@ The package contains a data frame called `swear_words`. You can filter or modify
 
 You are welcome to create a pull request either with modifications to current lists or with a completely new language.
 
+## Add (modify) a language
+
+If you are not comfortable with `git` and pull requests, you can just follow steps **1–3**. After you create the file, send it to me via [email](mailto:patrik.drhlik@gmail.com) with a subject **New sweary language: {LANG_CODE}**. We will acknowledge you in the README after we approve of the changes.
+
+1. **Choose a new language.**  
+   Find its two letter [ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+2. **Create a language file.**  
+  Place the file in `data-raw/swear-word-lists/{LANG_CODE}`.  
+  Example for English: `data-raw/swear-word-lists/en`.
+3. **Fill in the file with swear-words.** Following rules must apply:
+   + **One** swear-word per line.
+   + All words must be **lowercase**.
+   + The list must only contain **unique** words.
+   + The list must be **sorted** alphabetically.
+4. **Make sure all the tests pass.**  
+  You can do that using a development function called `build_sweary()`. It becomes available when you `git clone` the repository and   call `devtools::load_all()`. Or pressing `Ctrl+Shift+L` in RStudio. Learn more about calling this function using `?build_sweary`.
+5. **Update README.**  
+  Add a line to the table with swear-word counts in README. Don't forget to update total counts. (We will try to automate this step in near future.)
+6. **Create a pull request.**
+
 ## Origin
 
 The idea first appeared after the [South Park text analysis lightning talk](https://github.com/pdrhlik/southparktalk-whyr2018) at the [Why R? 2018 conference](http://whyr2018.pl/) in Wrocław. All the contributors will be acknowledged as the work progresses.
