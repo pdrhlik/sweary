@@ -1,5 +1,10 @@
+library(testthat)
+library(sweary)
+library(dplyr)
+library(purrr)
+
 # Test variables
-swear_word_folder <- "../../data-raw/swear-word-lists"
+swear_word_folder <- system.file("swear-word-lists", package = "sweary")
 swear_word_files <- list.files(swear_word_folder, full.names = TRUE)
 
 #' Extracts file name from a file path.
