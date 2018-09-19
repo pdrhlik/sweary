@@ -1,5 +1,5 @@
 [![Join the chat at https://gitter.im/pdrhlik/sweary](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/swearyr)
-
+[![Build Status](https://travis-ci.org/pdrhlik/sweary.svg?branch=master)](https://travis-ci.org/pdrhlik/sweary)
 
 # sweary <img src="sticker/sweary-sticker.png" align="right" width="150" />
 
