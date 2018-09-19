@@ -19,8 +19,8 @@ devtools::install_github("pdrhlik/sweary")
 | ------------- | ------------- | --------------------- |
 | Czech         | cs            | 57                    |
 | English       | en            | 39                    |
-| Polish        | pl            | 42                    |
-| **Total**     | **2 langs**   | **96**                |
+| Polish        | pl            | 41                    |
+| **Total**     | **3 langs**   | **137**               |
 
 ## How to use it
 
