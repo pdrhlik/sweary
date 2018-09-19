@@ -1,4 +1,4 @@
-[![Join the chat at https://gitter.im/pdrhlik/sweary](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pdrhlik/sweary)
+[![Join the chat at https://gitter.im/pdrhlik/sweary](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/swearyr)
 
 
 # sweary <img src="sticker/sweary-sticker.png" align="right" width="150" />
