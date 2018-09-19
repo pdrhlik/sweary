@@ -1,0 +1,80 @@
+---
+title: Word cloud of swear-words from reddit comments
+author: Related to Trump
+output:
+  html_document:
+    mathjax:  default
+    fig_caption:  true
+    toc: true
+    section_numbering: true
+    css: ggsci.css
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Word cloud of swear-words from reddit comments}
+---
+```{r include = FALSE}
+library(knitr)
+opts_chunk$set(
+	comment = "",
+	fig.width = 12, 
+	message = FALSE,
+	warning = FALSE,
+	tidy.opts = list(
+		keep.blank.line = TRUE,
+		width.cutoff = 150
+		),
+	options(width = 150),
+	eval = TRUE
+)
+```
+
+
+```{r}
+library(sweary);library(dplyr)
+swear_words %>%
+  count(language)
+```
+
+
+
+```{r}
+library(RedditExtractoR)
+reddit_comments <-
+  get_reddit(
+    search_terms = 'trump',
+    subreddit = 'politics',
+    cn_threshold = 10
+  )
+dim(reddit_comments)
+```
+
+```{r}
+# top_1000_scored <-
+#   reddit_comments %>%
+#   dplyr::arrange(desc(comment_score)) %>%
+#   head(1000)
+```
+```{r}
+reddit_swear_words <-
+  #top_1000_scored$comment %>%
+  reddit_comments$comment %>%
+  stringi::stri_extract_all_words() %>%
+  unlist %>%
+  tolower %>%
+  data.frame(word = ., stringsAsFactors = FALSE) %>%
+  inner_join(
+    swear_words %>% filter(language == 'en')
+  )
+
+reddit_swear_words %>%
+  count(word)
+```
+
+```{r}
+reddit_swear_words %>%
+  count(word) %>%
+  rename(freq = n) %>%
+  wordcloud2()
+```
+
+
