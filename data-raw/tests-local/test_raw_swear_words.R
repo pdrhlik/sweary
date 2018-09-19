@@ -9,7 +9,7 @@ purrr::walk(swear_word_files, function(swear_word_file) {
 	f <- readLines(swear_word_file, encoding = "UTF-8")
 
 	test_that(paste(lang, "file is sorted"), {
-		expect_equal(f, sort(f))
+		expect_equal(f, sort(f, method = "shell"))
 	})
 
 	test_that(paste(lang, "file is lowercase"), {

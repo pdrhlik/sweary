@@ -4,8 +4,8 @@ test_that("swear word data frame exists", {
 	expect_true(exists("swear_words"))
 })
 
-test_that("swear word df contains all raw data", {
-	n_lang_df <- length(unique(swear_words$language))
+test_that(paste("swear word df contains all raw data"), {
+	n_lang_df <- length(unique(sweary::swear_words$language))
 	n_lang_files <- length(swear_word_files)
 
 	expect_equal(n_lang_df, n_lang_files)
@@ -14,5 +14,5 @@ test_that("swear word df contains all raw data", {
 		length(readLines(f))
 	}) %>% sum()
 
-	expect_equal(n_words, nrow(swear_words))
+	expect_equal(n_words, nrow(sweary::swear_words))
 })
