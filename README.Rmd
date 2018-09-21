@@ -56,9 +56,21 @@ devtools::install_github("pdrhlik/sweary")
 `r glue_collapse(lang_counts$label_row, sep = "\n")`
 | **Total**     | **`r nrow(lang_counts)` langs**   | **`r sum(lang_counts$n)`**               |
 
-## How to use it
+## Examples
 
-The package contains a data frame called `swear_words`. You can filter or modify it as you wish now. There will be convenient functions to extract only the languages that are of your interest.
+All languages are stored in a `swear_words` data frame.
+
+```{r ex_all_langs}
+library(sweary)
+head(swear_words)
+```
+
+You can only extract one language that you are interested in.
+
+```{r ex_one_lang}
+en_swear_words <- get_lang("en")
+head(en_swear_words)
+```
 
 ## Add (modify) a language
 

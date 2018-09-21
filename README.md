@@ -24,10 +24,42 @@ Current swear word lists
 | Polish    | pl            | 41                    |
 | **Total** | **3 langs**   | **137**               |
 
-How to use it
--------------
+Examples
+--------
 
-The package contains a data frame called `swear_words`. You can filter or modify it as you wish now. There will be convenient functions to extract only the languages that are of your interest.
+All languages are stored in a `swear_words` data frame.
+
+``` r
+library(sweary)
+head(swear_words)
+```
+
+    ## # A tibble: 6 x 2
+    ##   word     language
+    ##   <chr>    <chr>   
+    ## 1 buzerant cs      
+    ## 2 čubka    cs      
+    ## 3 čurák    cs      
+    ## 4 čůrák    cs      
+    ## 5 debil    cs      
+    ## 6 dement   cs
+
+You can only extract one language that you are interested in.
+
+``` r
+en_swear_words <- get_lang("en")
+head(en_swear_words)
+```
+
+    ## # A tibble: 6 x 2
+    ##   word     language
+    ##   <chr>    <chr>   
+    ## 1 arse     en      
+    ## 2 arsehole en      
+    ## 3 ass      en      
+    ## 4 asshole  en      
+    ## 5 bitch    en      
+    ## 6 bollocks en
 
 Add (modify) a language
 -----------------------
