@@ -47,7 +47,7 @@ head(swear_words)
 You can only extract one language that you are interested in.
 
 ``` r
-en_swear_words <- get_lang("en")
+en_swear_words <- get_swearwords("en")
 head(en_swear_words)
 ```
 
