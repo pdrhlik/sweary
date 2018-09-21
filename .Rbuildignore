@@ -3,3 +3,5 @@
 ^\.travis\.yml$
 sticker/
 data-raw/
+^README\.Rmd$
+^README-.*\.png$
