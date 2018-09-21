@@ -18,5 +18,6 @@ Suggests:
     testthat,
     devtools,
     dplyr,
-    purrr
+    purrr,
+    rmarkdown
 Imports: glue

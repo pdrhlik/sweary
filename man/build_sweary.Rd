@@ -11,6 +11,11 @@ It starts with rebuilding the `swear_words` data frame
   by running a prepared script. It lists all language files
   and constructs the data frame.
 
+  Then it rerenders the README.Rmd file so that all the proper
+  numbers of new words and languages propagate into README.md.
+  We also have to delete the README.html file that is created
+  in the process.
+
   The next step is to create necesarry documentation from
   roxygen comments.
 
