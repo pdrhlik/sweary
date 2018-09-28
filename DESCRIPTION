@@ -16,6 +16,8 @@ LazyData: true
 RoxygenNote: 6.0.1
 Suggests:
     testthat,
+    devtools,
     dplyr,
-    purrr
+    purrr,
+    rmarkdown
 Imports: glue
