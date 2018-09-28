@@ -22,7 +22,8 @@ Current swear word lists
 | Czech     | cs            | 57                    |
 | English   | en            | 39                    |
 | Polish    | pl            | 41                    |
-| **Total** | **3 langs**   | **137**               |
+| Romanian  | ro            | 38                    |
+| **Total** | **4 langs**   | **175**               |
 
 Examples
 --------
