@@ -16,3 +16,4 @@
 #' @docType data
 #' @format A data frame with 96 rows and 2 variables.
 "swear_words"
+

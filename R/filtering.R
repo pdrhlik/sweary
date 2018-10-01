@@ -9,17 +9,17 @@
 #'
 #' @return Data frame of swear words of one language.
 #' @export
+#' 
+#' @importFrom attempt stop_if_not
+#' @importFrom glue glue
 #'
 #' @examples
 #' en_swear_words <- get_swearwords("en")
 #' head(en_swear_words)
 get_swearwords <- function(lang_code) {
-	lang_index <- sweary::swear_words$language == lang_code
+  
+  check_is_lang(lang_code)
 
-	if (sum(lang_index) == 0) {
-		stop(glue::glue("'{lang_code}' not part of the package yet. Would you like to add it? :-)"))
-	}
-
-	lang <- sweary::swear_words[sweary::swear_words$language == lang_code, ]
-	return(lang)
+  swear_words[swear_words$language == lang_code, ]
+	
 }
