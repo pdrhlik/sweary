@@ -1,23 +1,30 @@
-Package: sweary
 Type: Package
+Package: sweary
 Title: Database of Swear Words in R
 Version: 0.0.0.9000
-Authors@R: person("Patrik", "Drhlik", email = "patrik.drhlik@gmail.com",
-    role = c("aut", "cre"))
-Description: The packages tries to offer an extensive list of swear
-    words from different languages, cherry picked by native speakers.
-    It should then be used in different text analyses.
+Authors@R: 
+    person(given = "Patrik",
+           family = "Drhlik",
+           role = c("aut", "cre"),
+           email = "patrik.drhlik@gmail.com")
+Description: The packages tries to offer an extensive list
+    of swear words from different languages, cherry picked by native
+    speakers.  It should then be used in different text analyses.
+License: MIT + file LICENSE
 URL: https://github.com/pdrhlik/sweary
 BugReports: https://github.com/pdrhlik/sweary/issues
-Depends: R (>= 2.10)
-License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
-RoxygenNote: 6.0.1
+Depends: 
+    R (>= 2.10)
+Imports: 
+    attempt,
+    glue,
+    tokenizers
 Suggests:
-    testthat,
     devtools,
     dplyr,
     purrr,
-    rmarkdown
-Imports: glue
+    rmarkdown,
+    testthat
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.0
