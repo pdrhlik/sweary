@@ -17,9 +17,7 @@
 #' en_swear_words <- get_swearwords("en")
 #' head(en_swear_words)
 get_swearwords <- function(lang_code) {
-  
   check_is_lang(lang_code)
-
   swear_words[swear_words$language == lang_code, ]
 	
 }

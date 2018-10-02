@@ -2,22 +2,21 @@ context("test-detect")
 
 dre <- c("Yeah, nigga, we're still fuckin' with you Still waters run deep Still Snoop Dogg and D.R.E. '99, nigga, guess who's back Still, still doin' that shit, Andre? Oh for sho' Yeah Check me out It's still Dre Day nigga, AK nigga Though I've grown a lot, can't keep it home a lot ‘Cause when I frequent the spots that I'm known to rock You hear the bass from the truck when I'm on the block Ladies they pay homage, but haters say Dre fell off How? Nigga, my last album was The Chronic They wanna know if he still got it They say rap's changed, they wanna know how I feel about it (If you ain't up on thangs) Dr. Dre is the name, I'm ahead of my game Still puffin' my leaves, still fuck with the beats Still not lovin' police (Uh-uh) Still rock my khakis with a cuff and a crease (For sho') Still got love for the streets, reppin' 213 (For life) Still the beats bang, still doin' my thing Since I left ain't too much changed, still I'm representin' for them gangstas all across the world (Still) Hittin' them corners in them lo-lo's, girl Still takin' my time to perfect the beat And I still got love for the streets, it's the D.R.E. I'm representin' for them gangstas all across the world (Still) Hittin' them corners in them lo-lo's, girl Still takin' my time to perfect the beat And I still got love for the streets, it's the D.R.E. Since the last time you heard from me I lost some friends Well, hell, me and Snoop, we dippin' again Kept my ear to the streets, signed Eminem He's triple platinum, doin' 50 a week Still, I stay close to the heat And even when I was close to defeat, I rose to my feet My life's like a soundtrack I wrote to the beat Treat rap like Cali weed: I smoke 'til I sleep Wake up in the A.M., compose a beat I bring the fire 'til you're soakin' in your seat It's not a fluke, it's been tried, I'm the truth Since 'Turn Off the Lights' from the World Class Wreckin Cru I'm still at it, after mathematics In the home of drive-bys and ak-matics Swap meets, sticky green, and bad traffic I dip through, then I get skin, D.R.E. I'm representin' for them gangstas all across the world (Still) Hittin' them corners in them lo-lo's, girl Still takin' my time to perfect the beat And I still got love for the streets, it's the D.R.E. I'm representin' for them gangstas all across the world (Still) Hittin' them corners in them lo-lo's, girl Still takin' my time to perfect the beat And I still got love for the streets, it's the D.R.E. It ain't nothin' but more hot shit Another classic CD for y'all to vibe with Whether you're coolin' on the corner with your fly bitch Laid back in the shack, play this track I'm representin' for the gangstas all across the world Still (Hittin' them corners in them lo-lo's, girl) I'll break your neck, damn near put your face in your lap Niggas try to be the king, but the ace is back (So if you ain't up on thangs) Dr. Dre be the name, still runnin' the game Still got it wrapped like a mummy Still ain't trippin', love to see young blacks get money Spend time out the hood, take they moms out the hood Hit my boys off with jobs, no more livin' hard Barbeques every day, drivin' fancy cars Still gon' get mine regardless (Still) I'm representin' for them gangstas all across the world (Still) Hittin' them corners in them lo-lo's, girl Still takin' my time to perfect the beat And I still got love for the streets, it's the D.R.E. I'm representin' for them gangstas all across the world (Still) Hittin' them corners in them lo-lo's, girl Still takin' my time to perfect the beat And I still got love for the streets, it's the D.R.E. I'm representin' for them gangstas all across the world (Still) Hittin' them corners in them lo-lo's, girl Still takin' my time to perfect the beat And I still got love for the streets, it's the D.R.E.b Right back up in your mothafuckin' ass 9-5 plus four pennies! Add that shit up D.R.E. right back up on top of thangs Smoke some with your Dogg No stress, no seeds, no stems, no sticks! Some of that real sticky icky icky Ooh wee! Put it in the air! Well, you's a fool Dr.")
 
-
 test_that("is works", {
-  expect_true(sweary_is("slut", "en"))
-  expect_true(sweary_is("piss", "en"))
-  expect_true(sweary_is("twat", "en"))
-  expect_false(sweary_is("flower", "en"))
-  expect_false(sweary_is("puppy", "en"))
-  expect_false(sweary_is("chocolate", "en"))
+  expect_true(is_swearword("slut", "en"))
+  expect_true(is_swearword("piss", "en"))
+  expect_true(is_swearword("twat", "en"))
+  expect_false(is_swearword("flower", "en"))
+  expect_false(is_swearword("puppy", "en"))
+  expect_false(is_swearword("chocolate", "en"))
 })
 
 test_that("any, n and pct works", {
-  expect_true(sweary_any(dre, "en"))
-  expect_is(sweary_n(dre, "en"), "integer")
-  expect_is(sweary_pct(dre, "en"), "numeric")
+  expect_true(any_swearword(dre, "en"))
+  expect_is(n_swearword(dre, "en"), "integer")
+  expect_is(pct_swearword(dre, "en"), "numeric")
 })
 
 test_that("sweary_censor works", {
-  expect_is(sweary_censor(dre, "en"), "character")
+  expect_is(censor_swearword(dre, "en"), "character")
 })
