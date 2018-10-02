@@ -19,7 +19,7 @@
 
 ## Projects on the run
 
-* Create use casese of package functions
+* Create use cases of package functions
 
 ## Issues to solve
 
