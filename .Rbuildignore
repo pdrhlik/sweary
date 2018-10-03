@@ -1,3 +1,4 @@
+^devtools_history\.R$
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.travis\.yml$
