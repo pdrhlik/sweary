@@ -80,7 +80,7 @@ If you are not comfortable with `git` and pull requests, you can just follow ste
     -   The list must be **sorted** alphabetically.
 4.  **Make sure all the tests pass.**
     You can do that using a development function called `build_sweary()`. It becomes available when you `git clone` the repository and call `devtools::load_all()`. Or pressing `Ctrl+Shift+L` in RStudio. Learn more about calling this function using `?build_sweary`.
-5.  **Update README.Rmd**
+5.  **Update README.Rmd**.
     Update the `langs` data frame in README.Rmd by adding a new row to it. More precise instructions are in the raw file itself.
 6.  **Create a pull request.**
 
@@ -88,3 +88,14 @@ Origin
 ------
 
 The idea first appeared after the [South Park text analysis lightning talk](https://github.com/pdrhlik/southparktalk-whyr2018) at the [Why R? 2018 conference](http://whyr2018.pl/) in Wrocław. All the contributors will be acknowledged as the work progresses.
+
+Acknowledgments
+---------------
+
+Here we would like to say **BIG THANKS** to native speakers that help us with swear words dictionaries:
+
+-   Czech - [Patrik Drhlík](https://github.com/pdrhlik)
+-   English - [Patrik Drhlík](https://github.com/pdrhlik)
+-   Polish - [Michal Czyz](https://github.com/mczyzj)
+-   Romanian - Alexandru Supeanu
+-   Slovak - Šimon Žďárský
