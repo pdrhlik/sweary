@@ -6,7 +6,9 @@
 \alias{sweary-package}
 \title{sweary: A database of swear words from multiple languages}
 \description{
-sweary: A database of swear words from multiple languages
+The packages tries to offer an extensive list of swear
+    words from different languages, cherry picked by native speakers.
+    It should then be used in different text analyses.
 }
 \seealso{
 Useful links:
