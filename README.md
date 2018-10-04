@@ -110,6 +110,7 @@ with swear words dictionaries:
 
   - Czech - [Patrik Drhlík](https://github.com/pdrhlik)
   - English - [Patrik Drhlík](https://github.com/pdrhlik)
+  - French (Canada) - [Marc-André Désautels](https://github.com/desautm)
   - Polish - [Michal Czyz](https://github.com/mczyzj)
   - Romanian - Alexandru Supeanu
   - Slovak - Šimon Žďárský

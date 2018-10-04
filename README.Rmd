@@ -102,6 +102,7 @@ Here we would like to say **BIG THANKS** to native speakers that help us with sw
 
 * Czech - [Patrik Drhlík](https://github.com/pdrhlik)
 * English - [Patrik Drhlík](https://github.com/pdrhlik)
+* French (Canada) - [Marc-André Désautels](https://github.com/desautm)
 * Polish - [Michal Czyz](https://github.com/mczyzj)
 * Romanian - Alexandru Supeanu
 * Slovak - Šimon Žďárský
