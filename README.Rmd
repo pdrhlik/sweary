@@ -12,8 +12,8 @@ library(glue)
 # data frame. Make sure that the codes are alphabetically
 # ordered and include their language equivalent.
 langs <- data_frame(
-	lang_code = c("cs", "en", "fr", "pl", "ro", "sk"),
-	lang = c("Czech", "English", "French", "Polish", "Romanian", "Slovak")
+	lang_code = c("cs", "en", "fr-CA", "pl", "ro", "sk"),
+	lang = c("Czech", "English", "French (Canada)", "Polish", "Romanian", "Slovak")
 )
 
 # Counts of swear words for each language are computed

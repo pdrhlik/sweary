@@ -42,9 +42,9 @@ head(swear_words)
     ##   word     language
     ##   <chr>    <chr>   
     ## 1 buzerant cs      
-    ## 2 cubka    cs      
-    ## 3 curák    cs      
-    ## 4 curák    cs      
+    ## 2 čubka    cs      
+    ## 3 čurák    cs      
+    ## 4 čůrák    cs      
     ## 5 debil    cs      
     ## 6 dement   cs
 
@@ -80,27 +80,35 @@ approve of the changes.
     Place the file in `data-raw/swear-word-lists/{LANG_CODE}`.  
     Example for English: `data-raw/swear-word-lists/en`.
 3.  **Fill in the file with swear-words.** Following rules must apply:
-    -   **One** swear-word per line.
-    -   All words must be **lowercase**.
-    -   The list must only contain **unique** words.
-    -   The list must be **sorted** alphabetically.
-4.  **Make sure all the tests pass.**
-    You can do that using a development function called `build_sweary()`. It becomes available when you `git clone` the repository and call `devtools::load_all()`. Or pressing `Ctrl+Shift+L` in RStudio. Learn more about calling this function using `?build_sweary`.
-5.  **Update README.Rmd**.
-    Update the `langs` data frame in README.Rmd by adding a new row to it. More precise instructions are in the raw file itself.
+      - **One** swear-word per line.
+      - All words must be **lowercase**.
+      - The list must only contain **unique** words.
+      - The list must be **sorted** alphabetically.
+4.  **Make sure all the tests pass.**  
+    You can do that using a development function called
+    `build_sweary()`. It becomes available when you `git clone` the
+    repository and call `devtools::load_all()`. Or pressing
+    `Ctrl+Shift+L` in RStudio. Learn more about calling this function
+    using `?build_sweary`.
+5.  **Update README.Rmd**.  
+    Update the `langs` data frame in README.Rmd by adding a new row to
+    it. More precise instructions are in the raw file itself.
 6.  **Create a pull request.**
 
 ## Origin
 
-The idea first appeared after the [South Park text analysis lightning talk](https://github.com/pdrhlik/southparktalk-whyr2018) at the [Why R? 2018 conference](http://whyr2018.pl/) in Wrocław. All the contributors will be acknowledged as the work progresses.
+The idea first appeared after the [South Park text analysis lightning
+talk](https://github.com/pdrhlik/southparktalk-whyr2018) at the [Why
+R? 2018 conference](http://whyr2018.pl/) in Wrocław. All the
+contributors will be acknowledged as the work progresses.
 
-Acknowledgments
----------------
+## Acknowledgments
 
-Here we would like to say **BIG THANKS** to native speakers that help us with swear words dictionaries:
+Here we would like to say **BIG THANKS** to native speakers that help us
+with swear words dictionaries:
 
--   Czech - [Patrik Drhlík](https://github.com/pdrhlik)
--   English - [Patrik Drhlík](https://github.com/pdrhlik)
--   Polish - [Michal Czyz](https://github.com/mczyzj)
--   Romanian - Alexandru Supeanu
--   Slovak - Šimon Žďárský
+  - Czech - [Patrik Drhlík](https://github.com/pdrhlik)
+  - English - [Patrik Drhlík](https://github.com/pdrhlik)
+  - Polish - [Michal Czyz](https://github.com/mczyzj)
+  - Romanian - Alexandru Supeanu
+  - Slovak - Šimon Žďárský
