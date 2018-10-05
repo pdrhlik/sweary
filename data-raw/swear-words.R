@@ -4,7 +4,9 @@ library(stringr)
 library(dplyr)
 
 load_lang <- function(lang_file) {
-	words <- readr::read_csv(lang_file, col_names = c("word"))
+	suppressMessages(
+		words <- readr::read_csv(lang_file, col_names = c("word"))
+	)
 	lang <- stringr::str_extract(lang_file, "[\\w-]+$")
 
 	words$language <- lang

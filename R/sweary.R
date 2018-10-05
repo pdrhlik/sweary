@@ -16,3 +16,6 @@
 #' @docType data
 #' @format A data frame with 96 rows and 2 variables.
 "swear_words"
+
+## Deletes R CMD check NOTES for '.' and '%>%'.
+utils::globalVariables(c(".", "%>%"))

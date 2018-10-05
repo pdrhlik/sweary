@@ -4,7 +4,15 @@
 \alias{build_sweary}
 \title{Automates sweary builds}
 \usage{
-build_sweary()
+build_sweary(quiet = FALSE)
+}
+\arguments{
+\item{quiet}{If \code{TRUE}, stops printing most of the output.
+Defaults to \code{FALSE}.}
+}
+\value{
+Summary of the build process - list of class
+  \code{sweary_build_results}.
 }
 \description{
 It starts with rebuilding the `swear_words` data frame

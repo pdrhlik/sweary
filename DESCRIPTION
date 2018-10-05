@@ -19,5 +19,6 @@ Suggests:
     devtools,
     dplyr,
     purrr,
-    rmarkdown
+    rmarkdown,
+    stringr
 Imports: glue
