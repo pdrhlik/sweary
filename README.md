@@ -23,12 +23,13 @@ The development version of this package can be installed using
 | Language        | Language code | Number of swear words |
 | --------------- | ------------- | --------------------- |
 | Czech           | cs            | 57                    |
+| German          | de            | 107                   |
 | English         | en            | 39                    |
 | French (Canada) | fr-CA         | 20                    |
 | Polish          | pl            | 41                    |
 | Romanian        | ro            | 38                    |
 | Slovak          | sk            | 28                    |
-| **Total**       | **6 langs**   | **223**               |
+| **Total**       | **7 langs**   | **330**               |
 
 ## Examples
 
@@ -43,9 +44,9 @@ head(swear_words)
     ##   word     language
     ##   <chr>    <chr>   
     ## 1 buzerant cs      
-    ## 2 čubka    cs      
-    ## 3 čurák    cs      
-    ## 4 čůrák    cs      
+    ## 2 cubka    cs      
+    ## 3 curák    cs      
+    ## 4 curák    cs      
     ## 5 debil    cs      
     ## 6 dement   cs
 
@@ -111,6 +112,7 @@ with swear words dictionaries:
   - Czech - [Patrik Drhlík](https://github.com/pdrhlik)
   - English - [Patrik Drhlík](https://github.com/pdrhlik)
   - French (Canada) - [Marc-André Désautels](https://github.com/desautm)
+  - German - [Peter Meißner](https://github.com/petermeissner)
   - Polish - [Michal Czyz](https://github.com/mczyzj)
   - Romanian - Alexandru Supeanu
   - Slovak - Šimon Žďárský
