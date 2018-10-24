@@ -23,13 +23,13 @@ The development version of this package can be installed using
 | Language        | Language code | Number of swear words |
 | --------------- | ------------- | --------------------- |
 | Czech           | cs            | 57                    |
-| German          | de            | 107                   |
+| German          | de            | 100                   |
 | English         | en            | 39                    |
 | French (Canada) | fr-CA         | 20                    |
 | Polish          | pl            | 41                    |
 | Romanian        | ro            | 38                    |
 | Slovak          | sk            | 28                    |
-| **Total**       | **7 langs**   | **330**               |
+| **Total**       | **7 langs**   | **323**               |
 
 ## Examples
 
