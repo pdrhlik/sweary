@@ -17,4 +17,4 @@ load_lang <- function(lang_file) {
 lang_files <- list.files("data-raw/swear-word-lists/", full.names = TRUE)
 swear_words <- purrr::map_df(lang_files, load_lang)
 
-devtools::use_data(swear_words, overwrite = TRUE)
+usethis::use_data(swear_words, overwrite = TRUE)
