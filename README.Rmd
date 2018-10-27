@@ -18,7 +18,7 @@ langs <- data_frame(
 
 # Counts of swear words for each language are computed
 # based on our swear_words data frame.
-counts <- sweary::swear_words %>%,
+counts <- sweary::swear_words %>%
 	count(language)
 
 # This joined data frame includes language names,
