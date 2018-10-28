@@ -15,7 +15,7 @@ Data frame of swear words of one language.
 }
 \description{
 If the language doesn't exist yet, it throws
-an error. Otherwisee it returns a filtered
+an error. Otherwise it returns a filtered
 \code{swear_words} data frame.
 }
 \examples{

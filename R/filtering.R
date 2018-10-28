@@ -1,7 +1,7 @@
 #' Get swear words for one language
 #'
 #' @description If the language doesn't exist yet, it throws
-#' an error. Otherwisee it returns a filtered
+#' an error. Otherwise it returns a filtered
 #' \code{swear_words} data frame.
 #'
 #' @param lang_code \href{https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes}{ISO 639-1}
