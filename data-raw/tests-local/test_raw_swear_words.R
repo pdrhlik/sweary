@@ -19,4 +19,8 @@ purrr::walk(swear_word_files, function(swear_word_file) {
 	test_that(paste(lang, "file contains unique words"), {
 		expect_equal(f, unique(f))
 	})
+
+	test_that(paste(lang, "file doesn't contain multi-word phrases and trailing whitespace"), {
+		expect_equal(f, stringr::str_replace_all(f, "\\s", ""))
+	})
 })
