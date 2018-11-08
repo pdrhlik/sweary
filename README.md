@@ -78,12 +78,19 @@ approve of the changes.
 
 1.  **Choose a new language.**  
     Find its two letter [ISO 639-1
-    code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+    code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).  
+    If the language you are creating is a certain dialect (e.g. Canadian
+    French), find its [IETF language
+    tag](https://en.wikipedia.org/wiki/IETF_language_tag) in this
+    [language code
+    table](http://www.lingoes.net/en/translator/langcode.htm).
 2.  **Create a language file.**  
     Place the file in `data-raw/swear-word-lists/{LANG_CODE}`.  
-    Example for English: `data-raw/swear-word-lists/en`.
+    Examples:  
+      - English: `data-raw/swear-word-lists/en`
+      - Canadian French: `data-raw/swear-word-lists/fr-CA`
 3.  **Fill in the file with swear words.** Following rules must apply:
-      - **One** swear word per line.
+      - **One** swear word per line with no trailing whitespace.
       - All words must be **lowercase**.
       - The list must only contain **unique** words.
       - The list must be **sorted** alphabetically.
