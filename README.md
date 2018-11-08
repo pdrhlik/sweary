@@ -82,8 +82,8 @@ approve of the changes.
 2.  **Create a language file.**  
     Place the file in `data-raw/swear-word-lists/{LANG_CODE}`.  
     Example for English: `data-raw/swear-word-lists/en`.
-3.  **Fill in the file with swear-words.** Following rules must apply:
-      - **One** swear-word per line.
+3.  **Fill in the file with swear words.** Following rules must apply:
+      - **One** swear word per line.
       - All words must be **lowercase**.
       - The list must only contain **unique** words.
       - The list must be **sorted** alphabetically.
