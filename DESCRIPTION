@@ -20,5 +20,6 @@ Suggests:
     dplyr,
     purrr,
     rmarkdown,
-    stringr
+    stringr,
+    usethis
 Imports: glue
