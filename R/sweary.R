@@ -17,5 +17,5 @@
 #' @format A data frame with 96 rows and 2 variables.
 "swear_words"
 
-## Deletes R CMD check NOTES for '.' and '%>%'.
-utils::globalVariables(c(".", "%>%"))
+## Deletes R CMD check NOTES for '.', '%>%' and '.data'.
+utils::globalVariables(c(".", "%>%", ".data"))

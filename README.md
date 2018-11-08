@@ -86,10 +86,13 @@ approve of the changes.
     [language code
     table](http://www.lingoes.net/en/translator/langcode.htm).
 2.  **Create a language file.**  
-    Place the file in `data-raw/swear-word-lists/{LANG_CODE}`.  
+    Place the file in
+    `data-raw/swear-word-lists/{LANG_CODE}_{LANG_NAME}`.  
     Examples:  
-      - English: `data-raw/swear-word-lists/en`
-      - Canadian French: `data-raw/swear-word-lists/fr-CA`
+      - English: `data-raw/swear-word-lists/en_English`
+      - Canadian French: `data-raw/swear-word-lists/fr-CA_French
+        (Canada)`  
+        Note that spaces and parentheses in file names are allowed.
 3.  **Fill in the file with swear words.** Following rules must apply:
       - **One** swear word per line with no trailing whitespace.
       - All words must be **lowercase**.
@@ -101,10 +104,7 @@ approve of the changes.
     repository and call `devtools::load_all()`. Or pressing
     `Ctrl+Shift+L` in RStudio. Learn more about calling this function
     using `?build_sweary`.
-5.  **Update README.Rmd**.  
-    Update the `langs` data frame in README.Rmd by adding a new row to
-    it. More precise instructions are in the raw file itself.
-6.  **Create a pull request.**
+5.  **Create a pull request.**
 
 ## Origin
 

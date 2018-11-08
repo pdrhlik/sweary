@@ -97,7 +97,7 @@ format.sweary_build_results <- function(x) {
 		status$errors > 0 ~ "You need to fix some ERRORS!",
 		status$warnings > 0 ~ "You should fix those WARNINGS!",
 		status$notes > 0 ~ "Handle those NOTES and you're good to go!",
-		TRUE ~ paste0("Great job! Random swearword for you: ", rsw$word, " [", rsw$language, "] :-)")
+		TRUE ~ paste0("Great job! Random swear word for you: ", rsw$word, " [", rsw$language, "] :-)")
 	)
 
 	glue::glue("
@@ -203,4 +203,87 @@ print_devtools_check_summary <- function(x) {
 		errors: {x$errors}
 		warnings: {x$warnings}
 		notes: {x$notes}")
+}
+
+#' Splits lang file name in language code and name
+#'
+#' @param lang_file Language file name, either absolute
+#'   or relative.
+#'
+#' @return Character vector of length 2. First
+#'   element is language code, second element
+#'   is language name.
+split_lang_file <- function(lang_file) {
+  file_name <- stringr::str_split(lang_file, "/", simplify = TRUE) %>%
+    dplyr::last(.)
+  file_split <- stringr::str_split(file_name, "_", simplify = TRUE)
+
+  return(file_split)
+}
+
+#' Returns language code from file name
+#'
+#' @param lang_file Language file name, either absolute
+#'   or relative.
+#'
+#' @return Language code.
+file_lang_code <- function(lang_file) {
+  file_split <- split_lang_file(lang_file)
+
+  return(file_split[1])
+}
+
+#' Returns language name from file name
+#'
+#' @param lang_file Language file name, either absolute
+#'   or relative.
+#'
+#' @return Language name.
+file_lang_name <- function(lang_file) {
+  file_split <- split_lang_file(lang_file)
+
+  return(file_split[2])
+}
+
+#' Loads a single language data frame from file
+#'
+#' @param lang_file Language file name with full path.
+#' @return Data frame of swear words in one language.
+load_lang_from_file <- function(lang_file) {
+  suppressMessages(
+    words <- readr::read_csv(lang_file, col_names = c("word"))
+  )
+  words$language <- file_lang_code(lang_file)
+
+  return(words)
+}
+
+#' Create a summary df with languages and their counts
+#'
+#' @return Data frame with language codes, language names,
+#'   word counts and a formatted markdown table row.
+load_langs <- function() {
+  lang_files <- list.files("data-raw/swear-word-lists/", full.names = TRUE)
+
+  langs <- purrr::map_df(lang_files, function(lang_file) {
+    file_split <- split_lang_file(lang_file)
+    dplyr::data_frame(
+      lang_code = file_split[1],
+      lang = file_split[2]
+    )
+  })
+
+  counts <- sweary::swear_words %>%
+    dplyr::count(.data$language)
+
+  lang_counts <- dplyr::inner_join(
+    langs,
+    counts,
+    by = c("lang_code" = "language")
+  ) %>%
+    dplyr::mutate(
+      label_row = glue::glue("| {lang} | {lang_code} | {n} |")
+    )
+
+  return(lang_counts)
 }

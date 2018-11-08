@@ -8,30 +8,7 @@ output: github_document
 library(dplyr)
 library(glue)
 
-# If adding a new language, add a new row to the following
-# data frame. Make sure that the codes are alphabetically
-# ordered and include their language equivalent.
-langs <- data_frame(
-  lang_code = c("cs", "de", "en", "fr-CA", "gr", "mk", "pl", "ro", "sk"),
-  lang = c("Czech", "German", "English", "French (Canada)", "Greek", "Macedonian", "Polish", "Romanian", "Slovak")
-)
-
-# Counts of swear words for each language are computed
-# based on our swear_words data frame.
-counts <- sweary::swear_words %>%
-  count(language)
-
-# This joined data frame includes language names,
-# counts and labels that are used to create a row
-# in a markdown table.
-lang_counts <- inner_join(
-  langs,
-  counts,
-  by = c("lang_code" = "language")
-) %>%
-  mutate(
-    label_row = glue("| {lang} | {lang_code} | {n} |")
-  )
+lang_counts <- load_langs()
 ```
 
 [![Join the chat at https://gitter.im/pdrhlik/sweary](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/swearyr)
@@ -80,10 +57,11 @@ If you are not comfortable with `git` and pull requests, you can just follow ste
     Find its two letter [ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).\
     If the language you are creating is a certain dialect (e.g. Canadian French), find its [IETF language tag](https://en.wikipedia.org/wiki/IETF_language_tag) in this [language code table](http://www.lingoes.net/en/translator/langcode.htm).
 2. **Create a language file.**\
-    Place the file in `data-raw/swear-word-lists/{LANG_CODE}`.\
+    Place the file in `data-raw/swear-word-lists/{LANG_CODE}_{LANG_NAME}`.\
     Examples:\
-    + English: `data-raw/swear-word-lists/en`
-    + Canadian French: `data-raw/swear-word-lists/fr-CA`
+    + English: `data-raw/swear-word-lists/en_English`
+    + Canadian French: `data-raw/swear-word-lists/fr-CA_French (Canada)`\
+    Note that spaces and parentheses in file names are allowed.
 3. **Fill in the file with swear words.** Following rules must apply:
     + **One** swear word per line with no trailing whitespace.
     + All words must be **lowercase**.
@@ -91,9 +69,7 @@ If you are not comfortable with `git` and pull requests, you can just follow ste
     + The list must be **sorted** alphabetically.
 4. **Make sure all the tests pass.**\
     You can do that using a development function called `build_sweary()`. It becomes available when you `git clone` the repository and call `devtools::load_all()`. Or pressing `Ctrl+Shift+L` in RStudio. Learn more about calling this function using `?build_sweary`.
-5. **Update README.Rmd**.\
-    Update the `langs` data frame in README.Rmd by adding a new row to it. More precise instructions are in the raw file itself.
-6. **Create a pull request.**
+5. **Create a pull request.**
 
 ## Origin
 
