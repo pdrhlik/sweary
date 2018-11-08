@@ -26,11 +26,12 @@ The development version of this package can be installed using
 | German          | de            | 99                    |
 | English         | en            | 39                    |
 | French (Canada) | fr-CA         | 20                    |
+| Greek           | gr            | 13                    |
 | Macedonian      | mk            | 64                    |
 | Polish          | pl            | 41                    |
 | Romanian        | ro            | 38                    |
 | Slovak          | sk            | 28                    |
-| **Total**       | **8 langs**   | **386**               |
+| **Total**       | **9 langs**   | **399**               |
 
 ## Examples
 
@@ -121,6 +122,7 @@ with swear words dictionaries:
   - English - [Patrik Drhlík](https://github.com/pdrhlik)
   - French (Canada) - [Marc-André Désautels](https://github.com/desautm)
   - German - [Peter Meißner](https://github.com/petermeissner)
+  - Greek - Anonymous
   - Macedonian - [novica](https://github.com/novica)
   - Polish - [Michal Czyz](https://github.com/mczyzj)
   - Romanian - Alexandru Supeanu
