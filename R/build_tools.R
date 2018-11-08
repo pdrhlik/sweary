@@ -31,7 +31,7 @@
 build_sweary <- function(quiet = FALSE) {
 	reporter <- ifelse(quiet, "silent", testthat::default_reporter())
 	# Rebuild a swear_words data frame
-	source("data-raw/swear-words.R")
+	build_swear_words_df()
 	# Rerender the README file
 	safe_render <- purrr::safely(rmarkdown::render)
 	rr <- safe_render("README.Rmd", output_format = "github_document", encoding = "UTF-8", quiet = quiet)
@@ -203,6 +203,13 @@ print_devtools_check_summary <- function(x) {
 		errors: {x$errors}
 		warnings: {x$warnings}
 		notes: {x$notes}")
+}
+
+build_swear_words_df <- function() {
+  lang_files <- list.files("data-raw/swear-word-lists/", full.names = TRUE)
+  swear_words <- purrr::map_df(lang_files, load_lang_from_file)
+
+  usethis::use_data(swear_words, overwrite = TRUE)
 }
 
 #' Splits lang file name in language code and name
