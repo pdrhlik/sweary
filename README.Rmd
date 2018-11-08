@@ -12,26 +12,26 @@ library(glue)
 # data frame. Make sure that the codes are alphabetically
 # ordered and include their language equivalent.
 langs <- data_frame(
-	lang_code = c("cs", "de", "en", "fr-CA", "mk", "pl", "ro", "sk"),
-	lang = c("Czech", "German", "English", "French (Canada)", "Macedonian", "Polish", "Romanian", "Slovak")
+  lang_code = c("cs", "de", "en", "fr-CA", "gr", "mk", "pl", "ro", "sk"),
+  lang = c("Czech", "German", "English", "French (Canada)", "Greek", "Macedonian", "Polish", "Romanian", "Slovak")
 )
 
 # Counts of swear words for each language are computed
 # based on our swear_words data frame.
 counts <- sweary::swear_words %>%
-	count(language)
+  count(language)
 
 # This joined data frame includes language names,
 # counts and labels that are used to create a row
 # in a markdown table.
 lang_counts <- inner_join(
-	langs,
-	counts,
-	by = c("lang_code" = "language")
+  langs,
+  counts,
+  by = c("lang_code" = "language")
 ) %>%
-	mutate(
-		label_row = glue("| {lang} | {lang_code} | {n} |")
-	)
+  mutate(
+    label_row = glue("| {lang} | {lang_code} | {n} |")
+  )
 ```
 
 [![Join the chat at https://gitter.im/pdrhlik/sweary](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/swearyr)
